@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> combinator selector</title>
+    <style>
+        /*direct child (>)*/
+        div > p {
+            color:blue;
+        }
+        /*Next sibling combinator(+)*/
+        h2 + p{
+            color: darkgreen;
+        }
+        /*Subsequent sibling combinator(~)*/
+        div h2 ~ p{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+   <div>
+      <p>Decendant combinator</p>
+       <section>
+        <p>Inside section(grandchild)</p>
+       </section>
+    </div> 
+    <p>Matches all the elements that are decendent of a specified element</p>
+
+    <!--question 3-->
+     
+       <h2>Student details</h2>
+       <p>Name: Arun</p>
+       <p>Age:22</p>
+
+    <!--question 4-->  
+    <div>
+       <h2>Student details</h2>
+       <p>Name: Arun</p>
+       <p>Age:22</p>
+       <p>City: Chennai</p>
+    </div>
+</body>
+</html>
