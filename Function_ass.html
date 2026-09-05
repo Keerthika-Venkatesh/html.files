@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in javascript</title>
+</head>
+<body>
+    <h2>Function in javascript</h2>
+    <p>Parameters are placeholders defined in the function, while arguments are the actual values you pass when calling the function.</p>
+   <script>
+    function greet(name){// name is a parameter
+        console.log("Hello, " + name );
+    }
+
+    greet("KEERTHIKA");//this is argument line
+
+    //Default Function
+    //If no value is passed, the function automatically 
+    //uses the default value.
+    
+    
+    function greet(name = "VENKATESH"){
+        console.log("welcome, " + name + " !");
+    }
+    greet();
+    greet("KEERTHIKA");
+
+    // two function add, multiple and subtract
+
+    function add (a, b){
+      return a + b;
+ 
+    }
+    const multiply = function(a, b){
+        return a*b;
+    }
+    const subtract = (a,b) =>{
+        return a - b;
+    }
+    console.log("Addition:" , add(20,55));
+    console.log("Multiplication:", multiply(20,55));
+    console.log("subtract:", subtract(55,20));
+
+    
+
+    //function with parameter and  return value
+
+    
+    function calculateArea(lenght, width){
+        return lenght * width;
+    }
+    console.log("Area of a rectangle:", calculateArea(5,  4));
+    
+
+    //callback function------------
+    function sum(val1, val2, Callback){
+        let out=val1 + val2;
+        Callback(out);
+    }
+    function Display(out){
+        console.log("Enter the two value:" + out);
+
+    }
+    sum(25, 30, Display);
+
+    // global scope
+
+    let globalscope = "kerthika"; //global scope
+
+    function myFunction(){
+        let functionscope = "I am a keerthika"; //local scope
+        console.log(globalscope)
+        //local scope
+        console.log(functionscope)
+    }
+    myFunction();
+
+    //closure function
+    /*the javascript closure gives you access to an outer function scope from an inner function.*/
+    function outerFunction(){
+        let fun1 ="hi";
+        console.log(fun1);
+
+        function innerFunction(){
+            let fun2 = "Keerthika";
+             console.log(fun1, fun2);
+
+        }
+        innerFunction();
+    }
+    outerFunction();
+    </script> 
+        
+</body>
+</html>
