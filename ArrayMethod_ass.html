@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+</head>
+<body>
+    <p id = "output"></p>
+    <script>
+        let products =["Mobile", "Laptop", "Tablet"];
+        //The at() method return an indexed element from an array
+        function showat(){
+            let index=1;
+            document.getElementById("output").innerHTML +="at(1):" + products.at(index) +"<br>";
+        }
+        showat();
+        //push() method - add an element at the end
+        function addtoEnd(){
+            products.push("HeadPhone");
+            document.getElementById("output").innerHTML +="Push: Added 'headPhone'<br>";
+        
+        }
+        addtoEnd();
+        //pop method - remove element from the end
+        function removeLast(){
+            let removed = products.pop();
+            document.getElementById("output").innerHTML +="pop(): Removed" + removed  +"<br>";
+        }
+        removeLast();
+        //shift method - removes an element from the beginning
+
+        function removeFirst(){
+            let removed = products.shift();
+            document.getElementById("output").innerHTML +="shift(): Removed" + removed + "<br>";
+
+        }
+        removeFirst();
+         //unshift() method - adds an element at the beginning
+        function addtoStart(){
+            products.unshift("Laptop");
+            document.getElementById("output").innerHTML +="shift(): Added 'Laptop'<br>";
+
+        }
+        addtoStart();
+
+        //for loop method
+        document.getElementById("output").innerHTML += "Final array:<br>";
+        for (let i = 0; i < products.length; i++) {
+        document.getElementById("output").innerHTML += i +": " + products[i] +"<br>";
+        
+        };
+    </script>
+    
+</body>
+</html>
