@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+<body>
+    <h2>Object Method</h2>
+    <p id="result"></p>
+    <script>
+
+        // creating an object
+        let student ={
+            Name: "Keerthika",
+            Age: "21",
+            Course: "FullStack"
+        
+        };
+
+        //Access object properties
+
+        let Access ="";
+        Access += "Name: " + student.Name + "<br>";
+        Access += "age:" + student.Age + "<br>";
+        Access += "Course:" + student.Course + "<br>";
+        
+
+        //modification object properties
+
+        student.Name= "Abinaya";
+        Access += "<br>After Modification:<br>";
+        Access += "Name: " + student.Name + "<br>";
+       
+        
+        
+        //callback function
+
+        function display(callback) {
+           callback(Access);
+        }
+
+        function showResult(data) {
+           document.getElementById("result").innerHTML =  data;
+              
+        }
+        display(showResult);
+
+    </script>
+   
+</body>
+</html>
+
+
+
