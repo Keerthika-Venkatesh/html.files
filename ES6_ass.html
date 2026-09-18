@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6_1</title>
+</head>
+<body>
+
+    <h2>ES6_1</h2>
+    
+    <script>
+       // 1. let and const
+        const name = "Alice";
+        let age = 25;
+        age = age + 1;
+        console.log(`const name = ${name}`);
+        console.log(`let age = ${age}`);
+
+        // 2. Template literals
+        const city = "Cairo";
+        console.log(`${ name } is ${ age } years old and lives in ${ city }.`);
+
+        // 3. Function with default parameters
+        function greet(user = "Guest", greeting = "Hello") {
+            return `${ greeting }, ${ user } !`;
+        }
+        console.log(greet());
+        console.log(greet("Sam"));
+        console.log(greet("Sam", "Hi"));
+
+
+        // ===== ES6_2 =====
+
+        // 1. Destructuring
+        const person = { firstName: "John", lastName: "Doe" };
+        const { firstName, lastName } = person;
+        console.log(firstName, lastName);
+
+        const numbers = [10, 20, 30];
+        const [first, second, third] = numbers;
+        console.log(first, second, third);
+
+        // 2. Spread operator (copy array)
+        const originalArray = [1, 2, 3];
+        const copiedArray = [...originalArray];
+        copiedArray.push(4);
+        console.log("original:", originalArray);
+        console.log("copy:", copiedArray);
+
+        // 3. Rest operator
+        function sumAll(...nums) {
+            return nums.reduce((total, n) => total + n, 0);
+        }
+        console.log(sumAll(1, 2, 3));
+        console.log(sumAll(5, 10, 15, 20));
+
+
+        // ===== ES6_3 =====
+
+        // 1. Arrow functions
+        const square = x => x * x;
+        const add = (a, b) => a + b;
+        console.log(square(6));
+        console.log(add(4, 7));
+
+        // 2. Class with constructor and method
+        class Car {
+            constructor(brand, model) {
+                this.brand = brand;
+                this.model = model;
+            }
+            describe() {
+                return `This car is a ${ this.brand } ${ this.model }.`;
+            }
+        }
+        const myCar = new Car("Toyota", "Corolla");
+        console.log(myCar.describe());
+    </script>
+
+</body>
+</html>
